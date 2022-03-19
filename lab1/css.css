@@ -1,0 +1,784 @@
+.fon{
+    float: top;
+    width: 1400px;
+    height: 2315px;
+    background-color: red;
+}
+@font-face {
+	font-family: "LucidaGrande";
+	src: url(lucidagrande.ttf);
+}
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400i,700,700i');
+/* ----------------------- */
+
+/* Стили для подложки */
+
+.overlay {
+   
+
+   opacity: 0;
+   visibility: hidden;
+   
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, .5);
+   z-index: 20;
+   transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.moda {
+   
+
+   opacity: 0;
+   visibility: hidden;
+   
+   
+ 
+   width: 100%;
+   max-width: 500px;
+   
+  
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 30; 
+   
+   /*  Побочные стили   */
+   box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+   text-align: center;
+   padding: 30px;
+   border-radius: 3px;
+   background-color: #fff;
+   transition: 0.3s all;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.moda.active,
+.overlay.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.moda__cross {
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   fill: #444;
+   cursor: pointer;
+}
+
+
+/* Стили для кнопок*/
+
+.js-open-moda {
+    float: right;
+    text-decoration: none;
+    margin-right:13px;
+    width: 165px;
+    height: 31px;
+
+    
+    font-family: LucidaGrande;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    
+    color: #767676;
+}
+.js-open-moda:hover{
+    float: right;
+    border-bottom: 2px dashed #767676;
+    Text-decoration:none;
+    margin-right: 13px;
+    width: 165px;
+    height: 31px;
+
+    
+    font-family: LucidaGrande;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    
+    color: #767676;
+}
+.button {
+    width: 130px;
+    height: 40px;
+
+    font: inherit;
+    font-size: 17.77px;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+
+    color: #ffffff;
+    background-color: #777777;
+
+    border: none;
+}
+input {
+    width: 340px;
+    height: 40px;
+
+    font: inherit;
+
+    border: 1px solid #c3c3c3;
+}
+
+input:invalid {
+    border-color: #ff8383;
+    box-shadow: inset 0 0 25px #ff8383;
+}
+
+textarea {
+    width: 340px;
+    height: 140px;
+}
+/* ----------------------- */
+.heder{
+    float: top;
+    width: auto;
+    height: 231px;
+    background-color: #dcdcdc;
+}
+
+.hed{
+    margin: auto;
+    width: 1000px;
+    height: 231px;
+    background-color: rgba(188, 143, 143, 0);
+}
+
+.log{
+    float: left;
+    text-align: center;
+    margin-top: 64px;
+    margin-left: 10px;
+    width: 275px;
+    height: 102px;
+background: url(komp.png);
+}
+.number{
+float: right;
+margin-top: 27.73px;
+
+width: 412px;
+height: 47px;
+
+font-family: LucidaGrande;
+font-size: 40px;
+line-height: 47px;
+letter-spacing: 0.996px;
+
+color: #767676;
+}
+
+/* ----------------------- */
+.menu{
+    float: top;
+    width: auto;
+    height: 82px;
+    background-color: #777777;
+}
+
+.meni{
+    margin: auto;
+    width: 1000px;
+    height: 82px;
+    background-color: rgba(188, 143, 143, 0);
+}
+.txtgl-1{
+    float: left;
+    padding-top: 10px;
+    font-family: 'PT Sans', sans-serif;
+    margin-left: 35.52px;
+    text-decoration: none;
+
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+    
+    color: #FFFFFF;
+}
+.txtgl{
+    float: left;
+      margin-left: 10.27px;
+      padding-top: 10px;
+      text-decoration: none;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 1px;
+      
+      color: #FFFFFF;
+  }
+  .txtglpd{
+    float: left;
+      margin-left: 15.27px;
+      padding-top: 10px;
+      font-family: 'PT Sans', sans-serif;
+      
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 1.5px;
+      
+      color: #FFFFFF;
+  }
+  .txtgl-1:hover{
+    float: left;
+    padding-top: 10px;
+    font-family: 'PT Sans', sans-serif;
+    margin-left: 35.52px;
+    text-decoration: underline;
+    
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+    
+    color: #FFFFFF;
+}
+.txtgl:hover{
+    float: left;
+    margin-left: 10.27px;
+      padding-top: 10px;
+      text-decoration: underline;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 1px;
+      
+      color: #FFFFFF;
+  }
+/* ----------------------- */
+.slider{
+    float: top;
+    width: auto;
+    height: 402px;
+    background-color: #f8f8f8;
+}
+.slid{
+    margin: auto;
+    width: 1000px;
+    height: 402px;
+    background-color: rgba(170, 58, 214, 0);
+}
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 960px; /*максимальнная длинна*/
+    
+}
+
+/*настройка переключения и положения для левой стрелки*/
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+	background: url('strelkaR.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin: 0 0 0 84px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+	background: url('Strleft.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin: 0 84px 0 0; /*сдвиг вправо*/
+    
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+label, a{
+	cursor: pointer;
+}
+
+.all input{
+	display: none;
+}
+
+
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ 
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+
+
+#active{ 
+	margin: 23% 0 0;
+	text-align: center;
+}
+
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ 
+	opacity: 0.6;
+}
+
+#controls label{ 
+	transition: opacity 0.2s ease-out;
+}
+/* ----------------------- */
+.content{
+    float: top;
+    width: auto;
+    height: 1383px;
+    background-color: #FFFFFF;
+}
+.conti{
+    margin: auto;
+    width: 1000px;
+    height: 1383px;
+    background-color: rgba(233, 184, 252, 0);
+}
+.gl{
+    float: top;
+    width: 1000px;
+    height: 21px;
+    background-color: rgba(255, 99, 71, 0);
+}
+.txtgli{
+
+float: left;
+padding-left: 40px;
+text-decoration: underline;
+font-family: 'PT Sans', sans-serif;
+
+font-size: 14px;
+line-height: 16px;
+letter-spacing: -1.092px;
+
+color: #767676;
+}
+.txtgli2{
+
+    float: left;
+    padding-left: 5px;
+    text-decoration: underline;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1.092px;
+    
+    color: #767676;
+    }
+.txtgli1{
+
+    float: left;
+    padding-left: 5px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1.092px;
+    
+    color: #767676;
+    }
+.sleh{
+float: left;
+padding-left: 4.41px;
+font-family: 'PT Sans', sans-serif;
+
+font-size: 14px;
+line-height: 16px;
+
+color: #767676;
+}
+.lef{
+    float: left;
+    width: 209px;
+    height: 1361px;
+    background-color: rgba(153, 205, 50, 0);
+}
+.txtlef{
+float: left;
+padding-left: 40px;
+padding-top: 12px;
+font-family: 'PT Sans', sans-serif;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0.45px;
+
+color: #767676;
+}
+.txtlef:hover{
+    float: left;
+    padding-left: 40px;
+    padding-top: 12px;
+    text-decoration: underline;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.45px;
+    
+    color: #767676;
+    }
+    .txtlef1{
+    float: left;
+    padding-left: 40px;
+    padding-top: 8px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.45px;
+        
+    color: #767676;
+    }
+    .txtlef1:hover{
+    float: left;
+    padding-left: 40px;
+    padding-top: 8px;
+    text-decoration: underline;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.45px;
+            
+    color: #767676;
+    }
+    .minitxtlef{
+        float: left;
+        padding-left: 40px;
+        padding-top: 4px;
+        font-family: 'PT Sans', sans-serif;
+        
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.45px;
+
+color: #767676;
+    }
+    .minitxtlef:hover{
+        float: left;
+        padding-left: 40px;
+        padding-top: 4px;
+        font-family: 'PT Sans', sans-serif;
+        text-decoration: underline;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.45px;
+
+color: #010101;
+    }
+.logi{
+float: left;
+margin-top: 50px;
+margin-left: 77px;
+width: 99px;
+height: 113px;
+
+
+background: url(x.png);
+}
+.txtlogi{
+    float: left;
+    padding-left: 40px;
+font-size: 30px;
+line-height: 35px;
+letter-spacing: 0.75px;
+
+color: #444444;
+}
+
+.rit{
+    float: left;
+    width: 791px;
+    height: 900px;
+    background-color: rgba(255, 228, 181, 0);
+}
+.shop{
+    float: left;
+    margin-left: 4px;
+    margin-top: 15px;
+    width: 252px;
+    height: 382px;
+    background-color: #DCDCDC;
+}
+.shop1{
+    float: left;
+    margin-left: 14px;
+    margin-top: 15px;
+    width: 252px;
+    height: 382px;
+    background-color: #DCDCDC;
+}
+.fotik{
+float: left;
+margin-top: 20px;
+margin-left: 20px;
+width: 212px;
+height: 211px;
+
+background: url(NoPhoto.png);
+}
+.telega{
+    float: left;
+    margin-top: -17px;
+    margin-left: 186px;
+    width: 30px;
+    height: 23px;
+    
+    
+    background: url(buy.png);
+}
+.txtshop{
+float: left;
+padding-left: 21px;
+padding-top: 12.1px;
+
+font-family: 'PT Sans', sans-serif;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0.45px;
+
+color: #767676;
+}
+.txtshop1{
+    float: left;
+    padding-left: 21px;
+    padding-top: 2px;
+    
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.45px;
+    
+    color: #767676;
+    }
+    .zena{
+        float: left;
+        padding-left: 18px;
+        padding-top: 42px;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: 0.484px;
+        
+        color: #444444;
+    }
+    .txtstr{
+        float: left;
+        padding-left: 300px;
+        padding-top: 23px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 19.558px;
+        
+        color: #767676;
+    }
+    .txtstr:hover{
+        float: left;
+        padding-left: 300px;
+        padding-top: 23px;
+
+        
+        font-family: 'PT Sans', sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+        
+        color: #444444;
+    }
+    .txtstr1{
+        float: left;
+        padding-left: 15px;
+        padding-top: 23px;
+
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 19.558px;
+        
+        color: #767676;
+    }
+    .txtstr1:hover{
+        float: left;
+        padding-left: 14px;
+        padding-top: 23px;
+        
+        font-family: 'PT Sans', sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+        
+        color: #444444;
+    }
+    .lini{
+        float: left;
+        width: 782px;
+        height: 3px;
+       
+        background: url(line.png);
+    }
+.ritop{
+    float: left;
+    width: 791px;
+    height: 461px;
+    background-color: rgba(253, 245, 230, 0);
+}
+.ritop1{
+    float: left;
+    width: 395.5px;
+    height: 458px;
+    background-color: rgba(211, 184, 135, 0);
+}
+.ritop2{
+    float: left;
+    width: 395.5px;
+    height: 458px;
+    background-color: rgba(255, 217, 0, 0);
+}
+.txtmnogo{
+float: left;
+padding-top: 4px;
+font-family: 'PT Sans', sans-serif;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.56px;
+
+color: #767676;
+}
+/* ----------------------- */
+.footer{
+    float: top;
+    width: auto;
+    height: 221px;
+    background-color: #777777;
+}
+.footi{
+    margin: auto;
+    width: 1000px;
+    height: 221px;
+    background-color: rgba(233, 184, 252, 0);
+}
+.loof{
+    float: left;
+    width: 220px;
+    height: 221px;
+    background-color: rgba(153, 205, 50, 0);
+}
+.txtlest{
+float: left;
+padding-top: 45px;
+    font-family: 'PT Sans', sans-serif;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.438px;
+
+color: #FFFFFF;
+}
+.txtlest1{
+    float: left;
+    padding-top: 4px;
+        font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.438px;
+    
+    color: #FFFFFF;
+    }
+    .looft{
+        float: left;
+        width: 400px;
+        height: 221px;
+        background-color: rgba(153, 205, 50, 0);
+    }
+
+.txtlast1{
+    float: top;
+    padding-top: 45px;
+    padding-left: 135px;
+    text-decoration: underline;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1.092px;
+    
+    color: #FFFFFF;
+    }
+    .txtlast2{
+        float: top;
+        padding-top: 4px;
+        padding-left: 135px;
+        text-decoration: underline;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -1.092px;
+        
+        color: #FFFFFF;
+        }

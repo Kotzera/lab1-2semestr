@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <script src="script.js" ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChiefSlider [Example 3]</title>
+    <link rel="stylesheet" href="/examples/libs/chief-slider/chief-slider.min.css">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="css.css" type="text/css"/>
+    <script defer src="/examples/libs/chief-slider/chief-slider.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const slider = new ChiefSlider('.slider', {
+            loop: false
+          });
+        });
+      </script>
+      </script>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .slider__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .slider__items {
+      counter-reset: slide;
+    }
+
+    .slider__item {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      counter-increment: slide;
+      height: 250px;
+      position: relative;
+    }
+
+    .slider__item::before {
+      content: counter(slide) "/5";
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #fff;
+      font-style: italic;
+      font-size: 32px;
+      font-weight: bold;
+      display: block;
+    }
+
+    .slider__item:nth-child(1) {
+      background-color: #f44336;
+    }
+
+    .slider__item:nth-child(2) {
+      background-color: #9c27b0;
+    }
+
+    .slider__item:nth-child(3) {
+      background-color: #3f51b5;
+    }
+
+    .slider__item:nth-child(4) {
+      background-color: #03a9f4;
+    }
+
+    .slider__item:nth-child(5) {
+      background-color: #4caf50;
+    }
+  </style>
+  <body>
+    <div class="moda" data-modal="1">
+      <!--   Svg иконка для закрытия окна  -->
+      <svg class="moda__cross js-moda-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+    <div class="form">
+               <form class="feedback-form" action="#" method="post">
+                   <h2>Обратная связь</h2>
+   
+                   <p>
+                       <label for="username">
+                           <span>Ваше имя *</span><br>
+                           <input id="username" type="text" name="name" required>
+                       </label>
+                   </p>
+   
+                   <p>
+                       <label for="phonenumber">
+                           <span>Телефон *</span><br>
+                           <input id="phonenumber" type="text" name="phonenumber" required>
+                       </label>
+                   </p>
+                   
+   
+                   <p>
+                       <label for="email">
+                           <span>Email *</span><br>
+                           <input id="email" type="text" name="phonenumber" required>
+                       </label>
+                   </p>
+                   <p>
+                       <label for="message">
+                           <span>Сообщение</span><br>
+                           <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                       </label>
+                   </p>
+                   
+                   <button class="button" type="submit">Отправить</button>
+               </form>
+               </div>
+   </div>
+   
+
+   <div class="overlay js-overlay-moda"></div>
+    <div >
+
+        <div class="heder">
+            <div class="hed">
+                <div class="log"></div>
+                <div class="number">+7(499)777-77-77 <br>+7(499)777-77-77
+                <span>
+                  <a href="#" class="js-open-moda" data-modal="1">Обратная связь</a>
+                </span></div>
+                
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="meni">
+                <div class="txtgl-1">Главная </div><div class="txtglpd"> | </div>
+                <div class="txtgl">  Каталог </div><div class="txtglpd"> | </div>
+                <div class="txtgl">  Доставка и оплата </div><div class="txtglpd"> | </div>
+                <div class="txtgl">  Прайс-лист </div><div class="txtglpd"> | </div>
+                <div class="txtgl">  Контакты </div>
+                
+            </div>
+        </div>
+
+        <div class="slider">
+            <div class="slid">
+
+                <div class="all">
+                    <input checked type="radio" name="respond" id="desktop">
+                        <article id="slider">
+                                <input checked type="radio" name="slider" id="switch1">
+                                <input type="radio" name="slider" id="switch2">
+                                <input type="radio" name="slider" id="switch3">
+                                <input type="radio" name="slider" id="switch4">
+                                <input type="radio" name="slider" id="switch5">
+                            <div id="slides">
+                                <div id="overflow">
+                                    <div class="image">
+                                        <article><img src="krug.png"></article>
+                                        <article><img src="krug.png"></article>
+                                    <article><img src="krug.png"></article>
+                                        <article><img src="krug.png"></article>
+                                        <article><img src="krug.png"></article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controls">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                                <label for="switch5"></label>
+                            </div>
+                            <div id="active">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                                <label for="switch5"></label>
+                            </div>
+                        </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="conti">
+                <div class="gl">
+                  <div class="txtgli">Главная</div><div class="sleh">/</div>
+                  <div class="txtgli2">Каталог</div><div class="sleh">/</div>
+                  <div class="txtgli1">Бытоваятехника</div>
+                </div>
+                <div class="lef">
+                  <div class="txtlef">Автомобили</div>
+                  <div class="txtlef1">Бытоваятехника</div>
+                  <div class="txtlef1">Мобильная техника</div>
+                  <div class="minitxtlef">• Микроволновки</div>
+                  <div class="minitxtlef">• Холодильники</div>
+                  <div class="minitxtlef">• Посудомоечные машины</div>
+                  <div class="minitxtlef">• Чайники</div>
+                  <div class="txtlef1">Компьютеры</div>
+                  <div class="txtlef1">Одежда</div>
+                  <div class="txtlef1">Недвижимость</div>
+                  
+
+                  <div class="logi"></div>
+                  <div class="txtlogi">Прайс-лист</div>
+                </div>
+                <div class="rit">
+                  <div class="shop">
+                    <div class="fotik"></div>
+                    <div class="txtshop">Самый клевый чайник,</div>
+                    <div class="txtshop1">который надо купить!</div>
+                    <div class="zena">1 900 р.</div>
+                    <div class="telega"></div>
+                  </div>
+                  <div class="shop1">
+                    <div class="fotik"></div>
+                    <div class="txtshop">Самый клевый чайник,</div>
+                    <div class="txtshop1">который надо купить!</div>
+                    <div class="zena">1 900 р.</div>
+                    <div class="telega"></div>
+                  </div>
+                  <div class="shop1">
+                    <div class="fotik"></div>
+                    <div class="txtshop">Самый клевый чайник,</div>
+                    <div class="txtshop1">который надо купить!</div>
+                    <div class="zena">1 900 р.</div>
+                    <div class="telega"></div>
+                  </div>
+                  <div class="shop">
+                    <div class="fotik"></div>
+                    <div class="txtshop">Самый клевый чайник,</div>
+                    <div class="txtshop1">который надо купить!</div>
+                    <div class="zena">1 900 р.</div>
+                    <div class="telega"></div>
+                  </div>
+                  <div class="shop1">
+                    <div class="fotik"></div>
+                    <div class="txtshop">Самый клевый чайник,</div>
+                    <div class="txtshop1">который надо купить!</div>
+                    <div class="zena">1 900 р.</div>
+                    <div class="telega"></div>
+                  </div>
+                  <div class="txtstr">1</div>
+                  <div class="txtstr1">2</div>
+                  <div class="txtstr1">3</div>
+                  <div class="txtstr1">4</div>
+                  <div class="txtstr1">5</div>
+                  <div class="txtstr1">6</div>
+                  <div class="txtstr1">7</div>
+                </div>
+                <div class="ritop">
+                  <div class="lini"></div>
+                  <div class="ritop1">
+                    <div class="txtmnogo">Компания «ПиксельПлюс» существуетб олее6лет, за это</div>
+                    <div class="txtmnogo">время мы принимали участие в разработке болеечем</div>
+                    <div class="txtmnogo">700 сайтов, поэтому можем уверенно называть себя</div>
+                    <div class="txtmnogo">профессионалами. На данный момент наш коллектив</div>
+                    <div class="txtmnogo">состоит из болеечем 30 сотрудников работающих в двух</div>
+                    <div class="txtmnogo">офисах в Москве и Зеленограде.характерные для этого </div>
+                    <div class="txtmnogo">жанра мотивы: неразделённой любви, ухода молодости,</div>
+                    <div class="txtmnogo">угасания души.</div>
+                  </div>
+                  <div class="ritop2">
+                    <div class="txtmnogo">Одним из основных направлений работнашей компании</div>
+                    <div class="txtmnogo">является поисковое продвижение сайтов, наданной</div>
+                    <div class="txtmnogo">момент мы работаем с болеечем 150 постоянными</div>
+                    <div class="txtmnogo">клиентами по более чем 11000 поисковым запросам.</div>
+                    <div class="txtmnogo">Приэтом в работе основной акцент мы делаем на</div>
+                    <div class="txtmnogo">качестве работ, а также применяем собственные</div>
+                    <div class="txtmnogo">уникальные разработки в области SEO продвижения. На</div>
+                    <div class="txtmnogo">данный момент отдел SEO состоитиз 9 человек под</div>
+                    <div class="txtmnogo">руководством ведущего специалиста, преимущественно</div>
+                    <div class="txtmnogo">работающих в нашем московском офисе.</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+          <div class="footi">
+            <div class="loof">
+              <div class="txtlest">© 2012–2013 ЗА О «Компания»</div>
+              <div class="txtlest1">info@name.ru</div>
+            </div>
+            <div class="looft">
+            <div class="txtlast1">Главная</div>
+            <div class="txtlast2">Каталог</div>
+            <div class="txtlast2">Доставка и оплата</div>
+            <div class="txtlast2">Прайс-лист</div>
+            <div class="txtlast2">Контакты</div>
+          </div>
+          </div>
+        </div>
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+  </body>
+</html>
